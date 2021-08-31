@@ -1,0 +1,23 @@
+{
+  "name": "auto",
+  "version": "1.0.0",
+  "description": "kassim",
+  "main": "server.mjs",
+  "scripts": {
+    "start": "server.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "16.8.0"
+	},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebAhead11/node-auto.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WebAhead11/node-auto/issues"
+  },
+  "homepage": "https://github.com/WebAhead11/node-auto#readme"
+}
