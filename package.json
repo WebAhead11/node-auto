@@ -4,7 +4,7 @@
   "description": "kassim",
   "main": "server.mjs",
   "scripts": {
-    "start": "server.mjs",
+    "start": "node server.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
