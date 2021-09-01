@@ -10,7 +10,6 @@ function homeHandler(request, response) {
       response.writeHead(404, { "content-type": "text/html" });
       response.end("<h1>Not found</h1>");
     } else {
-      console.log("in homeHandler: not error");
       response.writeHead(200, { "content-type": "text/html" });
       response.end(file);
     }

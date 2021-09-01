@@ -4,18 +4,25 @@
     <meta charset="UTF-8" />
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" media="screen" href="public/style.css" />
+    <link rel="stylesheet" media="screen" href="../public/style.css" />
     <title>Document</title>
   </head>
   <body>
     <form autocomplete="off">
       <h3><strong>Auto Complete ✔✨</strong></h3>
       <label for="searchbar">Search🔍</label>
-      <input type="search" id="searchId" name="searchbar" />
+      <input type="search" id="searchId" name="searchbar" list="list" />
       <input type="submit" id="submitId" value="Search" />
-      <output></output>
+      <datalist id="list">
+        
+      </datalist>
     </form>
+
+    <div id="output">
+    </div>
+  
+    
   </body>
 
-  <script src="public/autocomplete.js"></script>
+  <script src="../public/main.js"></script>
 </html>

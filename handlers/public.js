@@ -8,13 +8,13 @@ const types = {
   const fs = require("fs");
   const path = require("path");
   function publicHandler(request, response) { 
-    console.log("our request: ",request.url);
+   // console.log("our request: ",request.url);
     const urlArray = request.url.split("."); // e.g. "/style.css" -> ["/style", "css"]
     const extension = urlArray[1]; // e.g. "css"
     const type = types[extension]; // e.g. "text/css"
     const filePath = path.join(__dirname, "..", request.url);
-    console.log("dirname: ",__dirname);
-    console.log("filepath: ",filePath);
+   // console.log("dirname: ",__dirname);
+   // console.log("filepath: ",filePath);
     fs.readFile(filePath, (error, file) => {
       if (error) {
         response.writeHead(404, { "content-type": "text/html" });
