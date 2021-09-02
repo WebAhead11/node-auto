@@ -48,6 +48,8 @@ submit.addEventListener("click", function(e) {
   function showOutput(name){
  //   console.log("showOutput")
     // according to name, bring the rest of info
+    if(name=="")
+        return;
     fetchData(name)
     .then(filteredData =>{
         if(filteredData[0]){

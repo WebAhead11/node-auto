@@ -33,26 +33,15 @@ html {
 }
 .outputlist {
   color: rgb(27, 27, 25);
-  /* display: flex; */
-  /* align-items: center; */
-  /* border-style: double; */
   height: 8cm;
   width: 200px;
   flex-direction: column;
   text-align: center;
   margin: auto;
-  margin-top: 1.7cm;
-  /* background-color: rgb(184, 184, 0); */
+  margin-top: 70px;
   padding-top: 0.5px;
-  /* box-shadow: 15px 50px 80px rgb(243 180 180 / 55%);
-  background-color: rgba(31, 28, 28, 0.295); */
 }
 
-/* #example1 {
-  border: 1px solid;
-  padding: 10px;
-  box-shadow: 5px 10px;
-} */
 .text-capital {
   color: red;
 }
