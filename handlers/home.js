@@ -16,6 +16,4 @@ function homeHandler(request, response) {
     }
   });
 }
-
-
   module.exports = homeHandler;

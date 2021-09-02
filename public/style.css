@@ -32,7 +32,7 @@ html {
   background-repeat: no-repeat;
 }
 .outputlist {
-  color: rgb(27, 27, 25);
+  /* color: rgb(27, 27, 25); */
   /* display: flex; */
   /* align-items: center; */
   /* border-style: double; */
@@ -41,7 +41,7 @@ html {
   flex-direction: column;
   text-align: center;
   margin: auto;
-  margin-top: 1.7cm;
+  margin-top: 70px;
   /* background-color: rgb(184, 184, 0); */
   padding-top: 0.5px;
   /* box-shadow: 15px 50px 80px rgb(243 180 180 / 55%);
