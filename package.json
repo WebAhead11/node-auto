@@ -5,11 +5,12 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
+    "run": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
     "node": "16.8.0"
-	},
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/WebAhead11/node-auto.git"
@@ -19,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/WebAhead11/node-auto/issues"
   },
-  "homepage": "https://github.com/WebAhead11/node-auto#readme"
+  "homepage": "https://github.com/WebAhead11/node-auto#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
 }

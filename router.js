@@ -4,7 +4,7 @@ const missingHandler = require("./handlers/missing.js");
 const getDataHandler = require("./handlers/getData.js");
 
  function router(request, response) {
-   console.log("in Router");
+  // console.log("in Router");
   const url = request.url;
   if (url === "/") {
     homeHandler(request, response);

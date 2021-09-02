@@ -8,6 +8,7 @@ const types = {
   const fs = require("fs");
   const path = require("path");
   function publicHandler(request, response) { 
+ //   console.log("Test: in publicHandler");
    // console.log("our request: ",request.url);
     const urlArray = request.url.split("."); // e.g. "/style.css" -> ["/style", "css"]
     const extension = urlArray[1]; // e.g. "css"
