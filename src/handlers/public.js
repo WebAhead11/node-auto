@@ -14,8 +14,8 @@ const types = {
     const extension = urlArray[1]; // e.g. "css"
     const type = types[extension]; // e.g. "text/css"
     const filePath = path.join(__dirname, "..", request.url);
-   // console.log("dirname: ",__dirname);
-   // console.log("filepath: ",filePath);
+    console.log("dirname: ",__dirname);
+    console.log("request.url: ",request.url);
     fs.readFile(filePath, (error, file) => {
       if (error) {
         response.writeHead(404, { "content-type": "text/html" });
