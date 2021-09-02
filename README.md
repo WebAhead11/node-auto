@@ -1,6 +1,9 @@
 # node-auto
 
-<!-- add image here -->
+---
+![Capture](https://user-images.githubusercontent.com/88267744/131823451-152483ae-c800-48ee-add7-278f10345789.PNG)
+
+---
 
 What?
 In this project we creater a server from scratch, then we connected router function to the server which routes us to the corresponding handler.
