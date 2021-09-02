@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 function homeHandler(request, response) {
+ // console.log("Test: in homeHandler");
   // public directory is one level above this, so we need the ".."
   const filePath = path.join(__dirname, "..","public", "index.html");
   fs.readFile(filePath, (error, file) => {

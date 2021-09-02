@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path=  require("path");
 function getDataHandler(request, response) {
+ // console.log("Test: in getDataHandler");
 const filePath = path.join(__dirname,"..", "states.json");
 fs.readFile(filePath, (error, file) => {
     if (error) {

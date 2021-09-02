@@ -1,12 +1,34 @@
+
 const search = document.getElementById("searchId");
 const submit = document.getElementById("submitId");
 const list = document.getElementById("list");
 const output = document.getElementById("output");
+var clickedOnList = false;
+
+/** create the full list before typing anything */
+    fetchAll();
+
+search.addEventListener("keydown",event=>{
+ //   console.log("search: keydown event")
+    /** here this keydown event listener is used to solved the problem of 
+     * clicking twice on a list item before it disapears*/
+
+    if(event.key){
+        // user typed characters into textField
+        clickedOnList = false;
+    }
+    else{
+        // user chose an option from list
+        clickedOnList = true;
+    }
+})
 
 search.addEventListener("input",(event)=>{
+  //  console.log("search: input event")
     fetchData(event.target.value)
     .then(filteredData =>{
-        autocomplete(filteredData) 
+        if(!clickedOnList) // don't show another list after user clicked on an item from list
+            autocomplete(filteredData) ;
     })
         .catch(err=>{
             alert(err);
@@ -19,8 +41,12 @@ submit.addEventListener("click", function(e) {
     const name = search.value;
     showOutput(name);
     search.value = "";
+
+    fetchAll(); // after submitting results, create a list of all data again
+    
   });
   function showOutput(name){
+ //   console.log("showOutput")
     // according to name, bring the rest of info
     fetchData(name)
     .then(filteredData =>{
@@ -45,40 +71,38 @@ submit.addEventListener("click", function(e) {
             output.appendChild(latElem);
             output.appendChild(longElem);
         }
-        
 
-        
-
-        // const nameElem = document.createElement("h2");
-        // nameElem.innerHTML = name;
-
-        // const nameElem = document.createElement("h2");
-        // nameElem.innerHTML = name;
-
-        // const nameElem = document.createElement("h2");
-        // nameElem.innerHTML = name;
-
-        // output.appendChild(nameElem);
-        
     })
     .catch(err=>{
         alert(err);
     })
   }
 
+  function fetchAll(){
+  //    console.log("fetchAll")
+    list.innerHTML = "";
+    return fetch("http://localhost:3000/data")
+    .then(response=>response.json())
+    .then(data=>{
+    autocomplete(data);
+})
+.catch(err=>{
+    alert(err);
+})
+ 
+  }
   function fetchData(name){
+  //  console.log("fetchData")
       list.innerHTML = "";
       return fetch("http://localhost:3000/data")
     .then(response=>response.json())
     .then((data)=>{
-        // Change here
         const filteredData = filterData(data,name);
         return filteredData;
     })
     .catch((err)=>{
         alert(err);
     }) 
-
   }
 
   function filterData(data,name){
@@ -86,10 +110,11 @@ submit.addEventListener("click", function(e) {
       return filteredDataObjs;
   }
   function autocomplete(data){
+ //   console.log("autocomplete")
     const names = data.map(obj=>obj.name);
     names.forEach(name=>{
         const option = document.createElement("option");
-        option.innerHTML = name;
+        option.value = name;
         list.appendChild(option);
     })
   }
