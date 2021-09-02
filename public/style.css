@@ -22,3 +22,14 @@ input[type="submit"] {
 input:hover {
   background-color: azure;
 }
+.backgroung {
+  background-image: image("Flag-United-States-of-America.jpg");
+}
+
+html {
+  background-color: #000;
+  background-image: url(https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg);
+  background-size: cover;
+  height: 100%;
+  background-repeat: no-repeat;
+}
